@@ -1,0 +1,57 @@
+.home-about-container {
+  background-image: url("AboutLogo.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  background-size: 40%;
+  background-repeat: no-repeat;
+}
+.home-about-head {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: to-upper-case($string: "");
+  margin-top: 4rem;
+  font-size: 20px;
+}
+.home-about-text {
+  font-family: "Inter";
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+
+  padding: 0px 100px 0px 100px;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 28px;
+}
+.home-about-read-more {
+  background: #182446;
+  color: white;
+  width: 120px;
+  height: 38px;
+  border-radius: 10px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .home-about-text {
+    font-size: 13px;
+    padding: 0px 25px 0px 25px;
+    margin-top: 1rem;
+    line-height: 20px;
+  }
+
+  .home-about-head {
+    margin-top: 2rem !important;
+  }
+  .home-about-container {
+    padding: 10px !important;
+    background-size: 80% !important;
+    background-repeat: no-repeat;
+  }
+}

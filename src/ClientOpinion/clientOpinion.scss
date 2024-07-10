@@ -1,0 +1,89 @@
+.client-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5%;
+  .client-main {
+    .client-main-head {
+      font-family: Inter;
+      font-size: 40px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .client-main-text {
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center;
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+  .carousel-section-main {
+    overflow: hidden;
+    position: relative;
+    .slick-dots li.slick-active button:before {
+      font-size: x-small;
+    }
+    .slick-dots li button:before {
+      font-size: x-small;
+    }
+    .crsl-image-card {
+      margin-bottom: 10rem;
+      border-radius: 19px !important;
+      margin-top: 3rem;
+      background-color: rgba(245, 245, 245, 1);
+      padding: 30px !important;
+      border: none;
+      .slider-title {
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .slider-position {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .slider-description {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .client-wrapper {
+    width: 90%;
+    margin-top: 10%;
+    .client-main {
+      .client-main-head {
+        font-size: 27px;
+      }
+      .client-main-text {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .carousel-section-main {
+      .crsl-image-card {
+        margin-bottom: 5rem;
+        margin-top: 3rem;
+        padding: 20px !important;
+        .slider-title {
+          font-size: 27px;
+        }
+        .slider-position {
+          font-size: 12px;
+        }
+        .slider-description {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

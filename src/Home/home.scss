@@ -1,0 +1,26 @@
+::-webkit-scrollbar-track {
+  // background-color: #000;
+  background: linear-gradient(to right, #a4c9d5, #ffffff);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  // background-color: #000;
+  background: linear-gradient(to right, #ffffff, #a4c9d5);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0f353f;
+}
+
+.main-home {
+  min-height: 100vh;
+  max-height: "auto";
+  width: 100%;
+  overflow: hidden;
+
+  scroll-behavior: smooth;
+}
+// .first-section {
+//   background: linear-gradient(to right, #ffffff, #a4c9d5);
+// }
