@@ -2,7 +2,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./navbar.scss";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 interface NavbarProps {
   scrollToAbout: () => void;

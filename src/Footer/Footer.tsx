@@ -1,4 +1,3 @@
-import React from "react";
 import "./footer.scss";
 import { useNavigate } from "react-router-dom";
 function Footer() {

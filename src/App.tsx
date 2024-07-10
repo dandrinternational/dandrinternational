@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "./Home/Home";
-import ClientOpinion from "./ClientOpinion/ClientOpinion";
 import Preloader from "./Preloader/Preloader";
 // import Preloader from "./components/preloader/Preloader";
 
