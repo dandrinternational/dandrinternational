@@ -1,11 +1,12 @@
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "./Home/Home";
 import Preloader from "./Preloader/Preloader";
-// import Preloader from "./components/preloader/Preloader";
 
 function App() {
+  useEffect(() => {
+    console.log("App component mounted");
+  }, []);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

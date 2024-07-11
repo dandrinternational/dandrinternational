@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Brochure from "../Brochure/Brochure";
 import ClientOpinion from "../ClientOpinion/ClientOpinion";
 import Footer from "../Footer/Footer";
@@ -9,6 +9,9 @@ import HomeServices from "../HomeServices/HomeServices";
 import Navbar from "../Navbar/Navbar";
 import "./home.scss";
 function Home() {
+  useEffect(() => {
+    console.log("Home component mounted");
+  }, []);
   const aboutRef = useRef<HTMLElement>(null);
   const servicesRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
@@ -17,6 +20,7 @@ function Home() {
   const scrollToSection = (ref: React.RefObject<HTMLElement>): void => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <div className="main-home">
       <div className="first-section">

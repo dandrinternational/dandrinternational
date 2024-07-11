@@ -8,7 +8,7 @@ function Brochure() {
   }, []);
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "D&R Brochure.pdf";
+    link.href = "/D&R Brochure.pdf";
     link.download = "D&R Brochure.pdf";
     link.target = "_blank";
 
