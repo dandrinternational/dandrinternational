@@ -46,7 +46,7 @@ function Footer() {
             <p className="mt-4 location-head">India</p>
             <span>
               B.Paul abroa Road, Near Cemetery Junction, North PO, Cochin-18,
-              Kerala, India <br></br> Ph: +91 86065 88000
+              Kerala, India <br></br> Ph: +91 9995929691
             </span>
           </div>
         </div>{" "}
