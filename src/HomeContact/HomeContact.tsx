@@ -29,9 +29,7 @@ function HomeContact() {
           </div>
           <div
             className="col-4 contact-col"
-            onClick={() =>
-              window.open("https://wa.me/+91 86065 88000", "_blank")
-            }
+            onClick={() => window.open("https://wa.me/9995929691", "_blank")}
             style={{ cursor: "pointer" }}
           >
             <img className="home-contact-icon sec" src="Chats.png" />
@@ -41,7 +39,7 @@ function HomeContact() {
 
           <div className="col-4 contact-col">
             <a
-              href="tel:+9061278671"
+              href="tel:+86 199 2746 1254"
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <img className="home-contact-icon" src="RingerVolume.png" />
