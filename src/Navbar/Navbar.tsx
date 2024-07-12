@@ -143,6 +143,10 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="container-fluid">
           <a className="navbar-brand fw-bold" href="#">
             <img src="logoDN.png" className="mobile-nav-logo" alt="" />
+            <p className="logo-name-mobile">
+              D&R GOLDEN WINGS<br></br> INTERNATIONAL TRADING <br></br>
+              COMPANY LTD.
+            </p>
           </a>
           <button
             className="navbar-toggler"
