@@ -29,7 +29,7 @@ function HomeContact() {
           </div>
           <div
             className="col-4 contact-col"
-            onClick={() => window.open("https://wa.me/9995929691", "_blank")}
+            onClick={() => window.open("https://wa.me/+919995929691", "_blank")}
             style={{ cursor: "pointer" }}
           >
             <img className="home-contact-icon sec" src="Chats.png" />

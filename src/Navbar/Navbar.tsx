@@ -4,18 +4,13 @@ import "./navbar.scss";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-interface NavbarProps {
-  scrollToAbout: () => void;
-  scrollToServices: () => void;
-  scrollToContact: () => void;
-  scrollToBrochure: () => void;
-}
-const Navbar: React.FC<NavbarProps> = ({
-  scrollToAbout,
-  scrollToServices,
-  scrollToContact,
-  scrollToBrochure,
-}) => {
+// interface NavbarProps {
+//   scrollToAbout: () => void;
+//   scrollToServices: () => void;
+//   scrollToContact: () => void;
+//   scrollToBrochure: () => void;
+// }
+const Navbar = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -82,42 +77,45 @@ const Navbar: React.FC<NavbarProps> = ({
                 data-aos-duration="1500"
                 style={{ cursor: "pointer" }}
               >
-                <a
+                <Link
+                  to="/about"
                   className={`nav-link ${
-                    location.pathname === "/retailerpsolutions" ? "active" : ""
+                    location.pathname === "/about" ? "active" : ""
                   }`}
-                  onClick={scrollToAbout}
+                  // onClick={scrollToAbout}
                 >
                   About us
-                </a>
+                </Link>
               </div>
               <div
                 data-aos="fade-down"
                 data-aos-duration="1500"
                 style={{ cursor: "pointer" }}
               >
-                <a
+                <Link
+                  to="/services"
                   className={`nav-link ${
                     location.pathname === "/services" ? "active" : ""
                   }`}
-                  onClick={scrollToServices}
+                  // onClick={scrollToServices}
                 >
                   Services
-                </a>
+                </Link>
               </div>
               <div
                 data-aos="fade-down"
                 data-aos-duration="1400"
                 style={{ cursor: "pointer" }}
               >
-                <a
+                <Link
+                  to="/brochure"
                   className={`nav-link ${
-                    location.pathname === "/media" ? "active" : ""
+                    location.pathname === "/brochure" ? "active" : ""
                   }`}
-                  onClick={scrollToBrochure}
+                  // onClick={scrollToBrochure}
                 >
                   Brochure
-                </a>
+                </Link>
               </div>
 
               <div
@@ -129,7 +127,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   className={`nav-link ${
                     location.pathname === "/contact" ? "active" : ""
                   }`}
-                  onClick={scrollToContact}
+                  // onClick={scrollToContact}
                 >
                   Contact us
                 </a>
@@ -176,7 +174,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  onClick={() => handleNavClick(scrollToAbout)}
+                  // onClick={() => handleNavClick(scrollToAbout)}
                 >
                   About Us
                 </a>
@@ -184,7 +182,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  onClick={() => handleNavClick(scrollToBrochure)}
+                  // onClick={() => handleNavClick(scrollToBrochure)}
                 >
                   Brochure
                 </a>
@@ -193,7 +191,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  onClick={() => handleNavClick(scrollToServices)}
+                  // onClick={() => handleNavClick(scrollToServices)}
                 >
                   Services
                 </a>
@@ -202,7 +200,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  onClick={() => handleNavClick(scrollToContact)}
+                  // onClick={() => handleNavClick(scrollToContact)}
                 >
                   Contact
                 </a>

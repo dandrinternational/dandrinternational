@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import Brochure from "../Brochure/Brochure";
 import ClientOpinion from "../ClientOpinion/ClientOpinion";
 import Footer from "../Footer/Footer";
@@ -9,17 +9,14 @@ import HomeServices from "../HomeServices/HomeServices";
 import Navbar from "../Navbar/Navbar";
 import "./home.scss";
 function Home() {
-  useEffect(() => {
-    console.log("Home component mounted");
-  }, []);
-  const aboutRef = useRef<HTMLElement>(null);
-  const servicesRef = useRef<HTMLElement>(null);
-  const contactRef = useRef<HTMLElement>(null);
-  const brochureRef = useRef<HTMLElement>(null);
+  // const aboutRef = useRef<HTMLElement>(null);
+  // const servicesRef = useRef<HTMLElement>(null);
+  // const contactRef = useRef<HTMLElement>(null);
+  // const brochureRef = useRef<HTMLElement>(null);
 
-  const scrollToSection = (ref: React.RefObject<HTMLElement>): void => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  // const scrollToSection = (ref: React.RefObject<HTMLElement>): void => {
+  //   ref.current?.scrollIntoView({ behavior: "smooth" });
+  // };
 
   return (
     <div className="main-home">
@@ -28,22 +25,22 @@ function Home() {
 
         <section>
           <Navbar
-            scrollToAbout={() => scrollToSection(aboutRef)}
-            scrollToServices={() => scrollToSection(servicesRef)}
-            scrollToContact={() => scrollToSection(contactRef)}
-            scrollToBrochure={() => scrollToSection(brochureRef)}
+          // scrollToAbout={() => scrollToSection(aboutRef)}
+          // scrollToServices={() => scrollToSection(servicesRef)}
+          // scrollToContact={() => scrollToSection(contactRef)}
+          // scrollToBrochure={() => scrollToSection(brochureRef)}
           />
         </section>
         <section>
           <HeroSection />
         </section>
-        <section ref={aboutRef}>
+        <section>
           <HomeAbout />
         </section>
-        <section ref={servicesRef}>
+        <section>
           <HomeServices />
         </section>
-        <section ref={brochureRef}>
+        <section>
           <Brochure />
         </section>
       </div>
@@ -52,7 +49,7 @@ function Home() {
         <ClientOpinion />
       </section>
       <HomeContact />
-      <footer ref={contactRef}>
+      <footer>
         <Footer />
       </footer>
     </div>
