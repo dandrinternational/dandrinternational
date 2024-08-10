@@ -112,7 +112,6 @@ const Navbar = () => {
                   className={`nav-link ${
                     location.pathname === "/brochure" ? "active" : ""
                   }`}
-                  // onClick={scrollToBrochure}
                 >
                   Brochure
                 </Link>
