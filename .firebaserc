@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "hosting": "dandrinternational-27c09",
+    "default": "dandrinternational-27c09"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
