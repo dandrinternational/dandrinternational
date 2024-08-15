@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 function HeroSection() {
   useEffect(() => {
     AOS.init();
@@ -32,7 +32,7 @@ function HeroSection() {
       <img className="hero-image" src="BG.png" alt="Background" />
       <div className="container-fluid card-container">
         <span className="Hero-image-head">
-          CONNECTING WORLDS, CREATING OPPORTUNITIES
+          CONNECTING WORLDS, <br></br>CREATING OPPORTUNITIES
         </span>
         <span className="Hero-image-sub-head">
           Your Global Partner in International Trade
@@ -43,68 +43,43 @@ function HeroSection() {
           pagination={{
             clickable: true,
           }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             640: {
-              slidesPerView: 2,
+              slidesPerView: 1,
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 1,
             },
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           className="service-slider"
         >
           {services.map((service, index) => (
             <SwiperSlide key={index}>
-              <div className="card hero-card">
-                <span className="card-head">{service.title}</span>
-                <p className="card-text">{service.description}</p>
-                <button
-                  className="card-button"
-                  onClick={() => {
-                    window.location.href =
-                      "mailto:enquiry@dandrinternational.com";
-                  }}
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  Enquire
-                </button>
+              <div className="service-slide">
+                <div className="service-content">
+                  <span className="service-title">{service.title}</span>
+                  <p className="service-description">{service.description}</p>
+                </div>
+                <div className="service-action">
+                  <button
+                    className="enquire-button"
+                    onClick={() => {
+                      window.location.href =
+                        "mailto:enquiry@dandrinternational.com";
+                    }}
+                  >
+                    Enquire
+                  </button>
+                </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <div className="row">
-          <div className="col-12 col-sm-4">
-            <div className="card hero-card">
-              <span className="card-head">Import and Export</span>
-              <p className="card-text">
-                We ensure the smooth and timely import and export of quality
-                products.
-              </p>
-              <button className="card-button">Enquire</button>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4">
-            <div className="card hero-card">
-              <span className="card-head">Logistics</span>
-              <p className="card-text">
-                Efficient logistics solutions for the transportation and
-                delivery of goods.
-              </p>
-              <button className=" card-button">Enquire</button>
-            </div>
-          </div>
-          <div className="col-12 col-sm-4">
-            <div className="card hero-card">
-              <span className="card-head">Tourism</span>
-              <p className="card-text">
-                Comprehensive tourism services: travel,accommodation, lodging,
-                tours, and Ayurveda.
-              </p>
-              <button className="card-button">Enquire</button>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

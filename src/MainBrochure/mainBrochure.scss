@@ -1,0 +1,11 @@
+.main-brochure {
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 600px) {
+  .main-brochure {
+    margin-top: 5rem !important;
+    margin-bottom: 4rem;
+  }
+}

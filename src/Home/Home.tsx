@@ -1,4 +1,4 @@
-// import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Brochure from "../Brochure/Brochure";
 import ClientOpinion from "../ClientOpinion/ClientOpinion";
 import Footer from "../Footer/Footer";
@@ -8,27 +8,28 @@ import HomeContact from "../HomeContact/HomeContact";
 import HomeServices from "../HomeServices/HomeServices";
 import Navbar from "../Navbar/Navbar";
 import "./home.scss";
+import ScrollTopOnMount from "../ScrollTopOnMount";
 function Home() {
   // const aboutRef = useRef<HTMLElement>(null);
   // const servicesRef = useRef<HTMLElement>(null);
-  // const contactRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
   // const brochureRef = useRef<HTMLElement>(null);
 
-  // const scrollToSection = (ref: React.RefObject<HTMLElement>): void => {
-  //   ref.current?.scrollIntoView({ behavior: "smooth" });
-  // };
+  const scrollToSection = (ref: React.RefObject<HTMLElement>): void => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="main-home">
       <div className="first-section">
-        {/* <ScrollTopOnMount /> */}
+        <ScrollTopOnMount />
 
         <section>
           <Navbar
-          // scrollToAbout={() => scrollToSection(aboutRef)}
-          // scrollToServices={() => scrollToSection(servicesRef)}
-          // scrollToContact={() => scrollToSection(contactRef)}
-          // scrollToBrochure={() => scrollToSection(brochureRef)}
+            // scrollToAbout={() => scrollToSection(aboutRef)}
+            // scrollToServices={() => scrollToSection(servicesRef)}
+            scrollToContact={() => scrollToSection(contactRef)}
+            // scrollToBrochure={() => scrollToSection(brochureRef)}
           />
         </section>
         <section>
@@ -49,7 +50,7 @@ function Home() {
         <ClientOpinion />
       </section>
       <HomeContact />
-      <footer>
+      <footer ref={contactRef}>
         <Footer />
       </footer>
     </div>

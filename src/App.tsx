@@ -5,6 +5,8 @@ import Preloader from "./Preloader/Preloader";
 import MainAbout from "./MainAbout/MainAbout";
 import MainServices from "./MainServices/MainServices";
 import MainBrochure from "./MainBrochure/MainBrochure";
+import Blog from "./Blog/Blog";
+import BlogDetail from "./Blog/BlogDetail";
 
 function App() {
   useEffect(() => {}, []);
@@ -28,6 +30,8 @@ function App() {
             <Route path="/about" element={<MainAbout />} />
             <Route path="/services" element={<MainServices />} />
             <Route path="/brochure" element={<MainBrochure />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blogdetail" element={<BlogDetail />} />
           </Routes>
         </BrowserRouter>
       )}

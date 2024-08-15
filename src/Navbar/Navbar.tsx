@@ -4,13 +4,13 @@ import "./navbar.scss";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-// interface NavbarProps {
-//   scrollToAbout: () => void;
-//   scrollToServices: () => void;
-//   scrollToContact: () => void;
-//   scrollToBrochure: () => void;
-// }
-const Navbar = () => {
+interface NavbarProps {
+  // scrollToAbout: () => void;
+  // scrollToServices: () => void;
+  scrollToContact: () => void;
+  // scrollToBrochure: () => void;
+}
+const Navbar: React.FC<NavbarProps> = ({ scrollToContact }) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -115,7 +115,20 @@ const Navbar = () => {
                   Brochure
                 </Link>
               </div>
-
+              <div
+                data-aos="fade-down"
+                data-aos-duration="1400"
+                style={{ cursor: "pointer" }}
+              >
+                <Link
+                  to="/blog"
+                  className={`nav-link ${
+                    location.pathname === "/blog" ? "active" : ""
+                  }`}
+                >
+                  Blog
+                </Link>
+              </div>
               <div
                 data-aos="fade-down"
                 data-aos-duration="1500"
@@ -125,7 +138,7 @@ const Navbar = () => {
                   className={`nav-link ${
                     location.pathname === "/contact" ? "active" : ""
                   }`}
-                  // onClick={scrollToContact}
+                  onClick={scrollToContact}
                 >
                   Contact us
                 </a>
@@ -170,35 +183,48 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to="/about"
                   className="nav-link"
                   // onClick={() => handleNavClick(scrollToAbout)}
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  to="/brochure"
                   className="nav-link"
                   // onClick={() => handleNavClick(scrollToBrochure)}
                 >
                   Brochure
-                </a>
+                </Link>
               </li>
 
               <li className="nav-item">
-                <a
+                <Link
+                  to="/services"
                   className="nav-link"
                   // onClick={() => handleNavClick(scrollToServices)}
                 >
                   Services
-                </a>
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  to="/blog"
+                  className="nav-link"
+                  // onClick={() => handleNavClick(scrollToServices)}
+                >
+                  Blog
+                </Link>
               </li>
 
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  // onClick={() => handleNavClick(scrollToContact)}
+                  onClick={() => handleNavClick(scrollToContact)}
                 >
                   Contact
                 </a>

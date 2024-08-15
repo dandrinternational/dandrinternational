@@ -1,19 +1,29 @@
+import { useRef } from "react";
 import Brochure from "../Brochure/Brochure";
 import Footer from "../Footer/Footer";
 import HomeContact from "../HomeContact/HomeContact";
 import Navbar from "../Navbar/Navbar";
-
+import ScrollTopOnMount from "../ScrollTopOnMount";
+import "./mainBrochure.scss";
 function MainBrochure() {
+  const contactRef = useRef<HTMLElement>(null);
+  // const brochureRef = useRef<HTMLElement>(null);
+
+  const scrollToSection = (ref: React.RefObject<HTMLElement>): void => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
+      <ScrollTopOnMount />
       <section>
-        <Navbar />
+        <Navbar scrollToContact={() => scrollToSection(contactRef)} />
       </section>
-      <section style={{ marginTop: "10rem", marginBottom: "4rem" }}>
+      <section className="main-brochure">
         <Brochure />
       </section>
       <HomeContact />
-      <footer>
+      <footer ref={contactRef}>
         <Footer />
       </footer>
     </div>
